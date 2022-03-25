@@ -1,0 +1,2 @@
+public class SlotsPlayer {
+}
