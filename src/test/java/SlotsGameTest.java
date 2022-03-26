@@ -5,13 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SlotsGameTest {
     SlotsGame game = new SlotsGame();
-    SlotReel reel;
 
     @Test
     void spin() {
         SlotReel[] results = game.spin();
         Assert.assertTrue(game.spinCheck(results));
-
     }
 
     @Test
@@ -20,6 +18,8 @@ class SlotsGameTest {
 
     @Test
     void getSlotReel() {
+        String actual = game.getSlotReel(game.spin());
+        Assert.assertTrue(actual != null);
     }
 
     @Test
